@@ -1,0 +1,64 @@
+
+.hero {
+  margin: auto;
+  background-image: url('../assets/img/boston-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sky {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-label {
+    margin: 15px;
+}
+
+form {
+    background: rgba(108, 122, 137, .7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.btn {
+    padding: 0px 15px ! important;
+    top: 15px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.box {
+    background-color: inherit ! important;
+    border: none ! important;
+    box-shadow: none ! important;
+}
+
+.title{
+    padding: 15px;
+    border-radius: 10px;
+}
+.title_profile {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 55px;
+}
+
+.title_predict {
+    background: rgba(108, 122, 137, .7);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.container.has-text-centered .profile {
+    background: rgba(108, 122, 137, .7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.tab {
+    flex-direction: column ! important;
+    align-items: inherit ! important;
+    border-bottom: none ! important;
+}

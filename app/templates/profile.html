@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title_profile">
+    Bonjour {{name}}!
+</h1>
+
+<div class="container profile">
+    <div class="row">
+        <div class="tab_head">
+            <div class="col-12 col-md-2"><h3>RM</h3></div>
+            <div class="col-12 col-md-2"><h3>LSTAT</h3></div>
+            <div class="col-12 col-md-2"><h3>PTRATIO</h3></div>
+            <div class="col-12 col-md-3"><h3>ESTIMATION</h3></div>
+            <div class="col-12 col-md-3"><h3>DATE</h3></div>
+        </div>
+    </div>
+    <div class="tab">
+        {% for user_estimation in user_estimations %}
+            <div class="row" style="border-bottom: solid 1px black;">
+                <div class="col-12 col-md-2" >
+                    {{ user_estimation.rm }}
+                </div>
+                <div class="col-12 col-md-2" >
+                    {{ user_estimation.lstat }}
+                </div>
+                <div class="col-12 col-md-2" >
+                    {{ user_estimation.ptratio }}
+                </div>
+                <div class="col-12 col-md-3" >
+                    {% set estim = user_estimation.estimation | float %}
+                    {{ "$%.2f"|format(estim) }} $
+                </div>
+                <div class="col-12 col-md-3" >
+                    {{ user_estimation.created_at }} $
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

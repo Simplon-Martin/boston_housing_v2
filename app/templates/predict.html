@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="sky">
+        <div class="title_predict">
+
+            <section class="container">
+                <h1>
+                    Le montant prédit est de {{ prediction }} $
+                </h1>
+            </section>
+        </div>
+        <div>
+            <a href="/" style="position: relative; top: 35px;padding: 8px 15px; border-radius: 20px; text-decoration: none; background-color:#EB984E ; color: #ffffff;">Recommencer</a>
+        </div>
+    </div>
+{% endblock %}
